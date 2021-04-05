@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import { GithubAppComponent } from './github-app/github-app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     GithubAppComponent,
-    GithubProfileComponent
+    GithubProfileComponent,
+    NavbarComponent,
+    NotFoundComponent
  
   ],
   imports: [
