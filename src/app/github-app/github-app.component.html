@@ -1,11 +1,10 @@
-<div class="border container searchPadding">
+
     <form action="">
         <div class="form-group">
             <label>Search GitHub User Names</label>
             <input type="text" class="form-control" placeholder="Search GitHub" [(ngModel)]="userName" name="userName" (keyup) = "findProfile()">
         </div>
     </form>
-    </div>
     <br>
     
     <div class= "topPadding container border" *ngIf = "user">

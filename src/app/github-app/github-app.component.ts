@@ -4,6 +4,7 @@ import { GithubService } from '../github.service';
 @Component({
   selector: 'app-github-app',
   templateUrl: './github-app.component.html',
+  providers:[GithubService],
   styleUrls: ['./github-app.component.css']
 })
 export class GithubAppComponent implements OnInit {
@@ -12,12 +13,12 @@ export class GithubAppComponent implements OnInit {
       userName!: string;
     
       constructor(private githubService:GithubService) {
-        this.githubService.getUser().subscribe((user: any[]) => {
+        this.githubService.getUser().subscribe((user: any) => {
           
           this.user = user;
         });
     
-        this.githubService.getRepos().subscribe((repos: any[]) => {
+        this.githubService.getRepos().subscribe((repos: any) => {
           
           this.repos = repos;
         });
@@ -28,12 +29,12 @@ export class GithubAppComponent implements OnInit {
     
         this.githubService.updateUser(this.userName);
     
-        this.githubService.getUser().subscribe((user: any[]) => {
+        this.githubService.getUser().subscribe((user: any) => {
           
           this.user = user;
         });
     
-        this.githubService.getRepos().subscribe((repos: any[]) => {
+        this.githubService.getRepos().subscribe((repos: any) => {
           
           this.repos = repos;
         });
