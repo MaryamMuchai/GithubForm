@@ -5,9 +5,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
  
 const routes: Routes = [
-{ path: "", component: GithubAppComponent},
+{ path: 'githubapp', component: GithubAppComponent},
 { path:'**', component:NotFoundComponent},
-{ path: "navbar",component: NavbarComponent},
+{ path: 'navbar',component: NavbarComponent}
 ]
 
 @NgModule({

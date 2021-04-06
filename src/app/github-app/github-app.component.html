@@ -1,21 +1,21 @@
 
     <form action="">
         <div class="form-group">
-            <label>Search GitHub User Names</label>
+            <label>Search GitHub Username</label>
             <input type="text" class="form-control" placeholder="Search GitHub" [(ngModel)]="userName" name="userName" (keyup) = "findProfile()">
         </div>
     </form>
-    <br>
+    <br><br>
     
-    <div class= "topPadding container border" *ngIf = "user">
+    <div class= "container1" *ngIf = "user">
     
           <div class="card">
-          <h5 class="card-header">{{user.name}} <small>({{user.login}})</small></h5>
+          <h2 class="card-header">{{user.name}} <small>({{user.login}})</small></h2>
           <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     
-                    <img src="{{user.avatar_url}}" class="img-thumbnail img-fluid">
+                    <img src="{{user.avatar_url}}" class="img-fluid">
                     <hr>
                     
                     <a href="{{user.html_url}}" class="btn btn-outline-success btn-block" target="_blank"> GitHub Profile</a>
@@ -65,7 +65,7 @@
                                     <span class="badge badge-primary">{{repo.watchers}} Watcher</span>
                                     <span class="badge badge-info">{{repo.forks}} Forks</span>
                                     <br>
-                                    <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-info" style="width: 7.5rem">View Repo</a>
+                                    <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-info" style="width: 8.5rem">View Repo</a>
                                 </div>
     
                                 
