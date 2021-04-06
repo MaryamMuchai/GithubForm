@@ -7,14 +7,36 @@ import { GithubService } from '../github.service';
   styleUrls: ['./github-app.component.css']
 })
 export class GithubAppComponent implements OnInit {
- public githubUserQuery!: string;
- public githubProfile:any;
- public githubRepos!: any[];
- public errorMessage!: string; 
-
-  constructor(private githubService:GithubService) { 
-
- 
+      user: any[] = [];
+      repos: any[] = [];
+      userName!: string;
+    
+      constructor(private githubService:GithubService) {
+        this.githubService.getUser().subscribe((user: any[]) => {
+          
+          this.user = user;
+        });
+    
+        this.githubService.getRepos().subscribe((repos: any[]) => {
+          
+          this.repos = repos;
+        });
+    
+      }
+        
+      findProfile(){
+    
+        this.githubService.updateUser(this.userName);
+    
+        this.githubService.getUser().subscribe((user: any[]) => {
+          
+          this.user = user;
+        });
+    
+        this.githubService.getRepos().subscribe((repos: any[]) => {
+          
+          this.repos = repos;
+        });
 
 
   }

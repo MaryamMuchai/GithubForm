@@ -7,14 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubAppComponent } from './github-app/github-app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { GithubService } from './github.service';
 @NgModule({
   declarations: [
     AppComponent,
     GithubAppComponent,
-    GithubProfileComponent,
+    
     NavbarComponent,
     NotFoundComponent
  
@@ -23,10 +24,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

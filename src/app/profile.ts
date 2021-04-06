@@ -6,4 +6,5 @@ export class Profile {
     location: any;
     followers: any;
     following: any;
+    public_repos:any;
 }
