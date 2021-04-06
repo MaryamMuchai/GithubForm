@@ -5,10 +5,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
  
 const routes: Routes = [
-{ path: 'github-App', component: GithubAppComponent},
+{ path: "github", component: GithubAppComponent},
 { path:'**', component:NotFoundComponent},
 { path: "navbar",component: NavbarComponent},
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

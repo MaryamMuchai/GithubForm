@@ -7,8 +7,8 @@ import { GithubService } from '../github.service';
   styleUrls: ['./github-app.component.css']
 })
 export class GithubAppComponent implements OnInit {
-      user: any[] = [];
-      repos: any[] = [];
+      user: any;
+      repos: any;
       userName!: string;
     
       constructor(private githubService:GithubService) {
