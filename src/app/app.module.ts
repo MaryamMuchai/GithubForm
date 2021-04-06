@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { GithubService } from './github.service';
 import { DateCountPipe } from './date-count.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { DateCountPipe } from './date-count.pipe';
     
     NavbarComponent,
     NotFoundComponent,
-    DateCountPipe
+    DateCountPipe,
  
   ],
   imports: [

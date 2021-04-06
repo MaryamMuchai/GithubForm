@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-
-import { Observable, throwError } from 'rxjs';
+import {environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,13 +17,12 @@ export class GithubService {
   getUser(){
     return this._http.get('https://api.github.com/users/' + this.userName + '?client_id='
   + this.clientId + '&client_secret=' + this.clientSecret)
-  .map((res: { json: () => any; }) => res.json());
   }
 
   getRepos(){
     return this._http.get('https://api.github.com/users/' + this.userName + '/repos?client_id='
   + this.clientId + '&client_secret=' + this.clientSecret)
-  .map((res: { json: () => any; }) => res.json());
+  
  }
  updateUser(userName:string){
    this.userName = userName;
