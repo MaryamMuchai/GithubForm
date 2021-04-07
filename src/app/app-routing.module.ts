@@ -3,17 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { GithubComponent } from './github/github.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
-import { CommonModule } from '@angular/common';
  
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/github' },
   { path: "github", component: GithubComponent},
   { path:'about',component: AboutComponent},
   { path:'**', component: NotFoundComponent},
-  { path: '', pathMatch: 'full', redirectTo: '/github' },
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),CommonModule],
-  exports: [RouterModule],declarations:[]
+  imports: [RouterModule.forRoot(routes),],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

@@ -1,7 +1,6 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,8 +30,7 @@ import { GithubComponent } from './github/github.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    NgProgressModule.forRoot(),
-    NgProgressHttpClientModule
+   
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]
