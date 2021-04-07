@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ],
             "outputPath": "dist/GithubForm",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -125,4 +128,7 @@
     }
   },
   "defaultProject": "GithubForm"
+  
 }
+   
+  

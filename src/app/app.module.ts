@@ -19,7 +19,6 @@ import { GithubComponent } from './github/github.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     NavbarComponent,
     NotFoundComponent,
     DateCountPipe,
