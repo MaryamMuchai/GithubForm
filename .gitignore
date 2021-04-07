@@ -45,3 +45,10 @@ testem.log
 .DS_Store
 Thumbs.db
 environment.ts
+
+#Environment files
+/src/environments/environment.ts
+
+# e2e
+/e2e/*.js
+/e2e/*.map

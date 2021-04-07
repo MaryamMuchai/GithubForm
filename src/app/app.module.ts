@@ -5,22 +5,26 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubAppComponent } from './github-app/github-app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { GithubService } from './github.service';
 import { DateCountPipe } from './date-count.pipe';
+import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { GithubComponent } from './github/github.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubAppComponent,
     
     NavbarComponent,
     NotFoundComponent,
     DateCountPipe,
+    AboutComponent,
+    GithubComponent,
  
   ],
   imports: [
@@ -35,3 +39,7 @@ import { DateCountPipe } from './date-count.pipe';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function appRoutes(appRoutes: any, arg1: { useHash: true; }) {
+  throw new Error('Function not implemented.');
+}
+

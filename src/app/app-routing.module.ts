@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GithubAppComponent } from './github-app/github-app.component';
+import { GithubComponent } from './github/github.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
  
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'githubapp' },
-  { path: 'githubapp', component: GithubAppComponent},
-  { path: 'navbar',component: NavbarComponent},
-  { path:'**', component:NotFoundComponent},
+  { path: "github", component: GithubComponent},
+  { path:'about',component: AboutComponent},
+  { path:'**', component: NotFoundComponent},
+  { path: '', pathMatch: 'full', redirectTo: '/github' },
 ]
 
 @NgModule({

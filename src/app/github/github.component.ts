@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../github.service';
 
 @Component({
-  selector: 'app-github-app',
-  templateUrl: './github-app.component.html',
-  styleUrls: ['./github-app.component.css'],
+  selector: 'app-github',
+  templateUrl: './github.component.html',
+  styleUrls: ['./github.component.css'],
 
   providers:[GithubService]
   
