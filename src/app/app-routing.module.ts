@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { CommonModule } from '@angular/common';
  
 const routes: Routes = [
-  { path: "", component: GithubComponent},
+  { path: "github", component: GithubComponent},
   { path:'about',component: AboutComponent},
   { path:'**', component: NotFoundComponent},
   { path: '', pathMatch: 'full', redirectTo: '/github' },

@@ -47,7 +47,7 @@ Thumbs.db
 environment.ts
 
 #Environment files
-/src/environment/environment.ts
+/src/environments/environment.ts
 
 # e2e
 /e2e/*.js
